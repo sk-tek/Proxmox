@@ -10,7 +10,7 @@
 sudo apt-get Install ethtool
 ip addr # note the adapter name `enp6s0`
 ethtool enp6s0 # check "Suppoer Wake-on", "Wake-on"
-ethtool-s enp6s0 wol g # enables Wake On LAN (WOL)
+ethtool -s enp6s0 wol g # enables Wake On LAN (WOL)
 nano /etc/systemd/system/wol.service
 ```
 
