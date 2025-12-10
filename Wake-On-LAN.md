@@ -6,7 +6,7 @@
 
 - Configuration
 
-```
+```bash
 sudo apt-get Install ethtool
 ip addr # note the adapter name `enp6s0`
 ethtool enp6s0 # check "Suppoer Wake-on", "Wake-on"
@@ -16,7 +16,7 @@ nano /etc/systemd/system/wol.service
 
 - File: `/etc/systemd/system/wol.service`
 
-```
+```nano
 [Unit]
 Description=Enable Wake-on-LAN
 After=network.target
@@ -31,7 +31,7 @@ WantedBy=multi-user.target
 
 - Enable and start the service
 
-```
+```bash
 sudo systemctl enable wol.service
 sudo systemctl start wol.service
 ```
